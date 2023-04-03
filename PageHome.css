@@ -32,6 +32,8 @@
     padding: 0vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
@@ -54,9 +56,11 @@
     background: #7289da;
 }
 .m1firstwickets{
+    font-size: small;
     background: #7289da;
 }
 .m1firstover{
+    font-size: small;
     background: #7289da;
 }
 
@@ -68,12 +72,15 @@
 }
 
 .m1secondscore{
+    
     background: #7289da;
 }
 .m1secondwickets{
+    font-size: small;
     background: #7289da;
 }
 .m1secondover{
+    font-size: small;
     background: #7289da;
 }
 
@@ -106,11 +113,11 @@
 .headlines{
     text-align: center;
     margin-top: 1vh;
-    width: 40vw;
+    width: 60vw;
     height: 16vh;
     border-radius: 10px;
     background: #7289da;
-    margin-left: 30vw;
+    margin-left: 20vw;
     padding: 2vh;
     padding-left: 2vw;
     padding-right: 2vw;
