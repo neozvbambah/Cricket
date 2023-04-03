@@ -87,7 +87,7 @@
   match1btn2.addEventListener('click',(e)=>{
     let teamChoosed = match1btn2.innerHTML;
     if(openPlayer1Drawer==false){
-    PlayerNames.innerHTML = '<div><b>Players</b></div>';
+    PlayerNames.innerHTML = `<div><b>${teamChoosed}</b></div>`;
     onValue(ref(database,'/Teams/'+teamChoosed+'/Players' ), (snapshot) => {
       const matchDataBase = snapshot.val();
       snapshot.forEach(function(element){
@@ -111,7 +111,7 @@ let openPlayer2Drawer = false;
   match1btn4.addEventListener('click',(e)=>{
     let teamChoosed = match1btn4.innerHTML;
     if(openPlayer2Drawer==false){
-    PlayerNames.innerHTML = '<div><b>Players</b></div>';
+    PlayerNames.innerHTML = `<div><b>${teamChoosed}</b></div>`;
     onValue(ref(database,'/Teams/'+teamChoosed+'/Players' ), (snapshot) => {
       snapshot.forEach(function(element){
         PlayerNames.innerHTML += `<li>${element.val().name}`;

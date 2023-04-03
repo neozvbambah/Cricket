@@ -5,76 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cricket</title>
-</head>
-<link rel="stylesheet" href="PageHome.css">
-<body>
-
-<div class="Head">
-    A2 Cricket Tournament
+    <link rel="stylesheet" href="pageHome.css">
+   </head>
+<body class="bg-ltBlack text-oneGreen">
+<div class="Head h-16 mt-0 w-full bg-black text-white">
+   <span></span>
+    <h1 class="p-3 ml-2 text-3xl font-bold font-mono">A2 Cricket Tournament</h1>
+</div>
+<div class="allmatches flex flex-col mt-16">
+<div class="match1div flex flex-row justify-center align-center">
+   <div class=" bg-oneGreen text-black flex flex-col w-56 h-56 rounded-lg p-5 hover:bg-oneGreenDk hover:ease-in hover:duration-300">
+      <button class="match1btn2 text-xl"></button>
+      <div class="mt-20 ml-5 absolute flex flex-row">
+      <span class="m1firstscore text-4xl"></span> 
+      <h1 class="text-4xl">-</h1> 
+      <span class="m1firstwickets text-4xl"></span>
+      <span class="m1firstover"></span>
+     </div>
+   </div>
+     <h1 class="match1btn3 text-3xl ml-5 mr-5 mt-8">VS</h1>
+     <div class="bg-oneGreen text-black flex flex-col w-56 h-56 rounded-lg p-5 hover:bg-oneGreenDk hover:ease-in hover:duration-300">
+     <button class="match1btn4 text-xl"></button>
+    <div class="mt-20 ml-5 absolute flex flex-row">
+    <span class="m1secondscore text-4xl"></span>
+    <h1 class="text-4xl">-</h1>
+   <span class="m1secondwickets text-4xl"></span>
+   <span class="m1secondover"></span>
+   </div>
+   </div>
+</div>
+<div class="flex flex-col text-center mt-16">
+<h1 class="font-bold text-2xl">Players</h1>
+<span class="PlayerNames mt-8 p-8 w-full bg-oneGreenDk list-none text-black text-xl"></span>
+</div>
+<div class="headlinesOfComments mt-16 text-center">
+   <h1 class="font-bold text-2xl">Headlines</h1>
+</div>
+<div class="headlines text-center p-8 mt-8 bg-oneGreenDk">
+   <div class="comment text-black"></div>
 </div>
 
-<div class="allmatches">
-
-<div class="match1div">
-    <button class="match1btn1" id="match1btn1">
-        
-    </button>
-
-    <button class="match1btn2">
-        IND
-     </button>
-
-     <span class="m1firstscore">
-        220
-     </span>-
-     <span class="m1firstwickets">3</span>
-     (
-     <span class="m1firstover">
-        10.0
-     </span>
-     )
-     <button class="match1btn3">
-        VS
-     </button>
-
-     <span class="m1secondscore">
-        220
-     </span>-
-     <span class="m1secondwickets">
-        3
-     </span>(
-     <span class="m1secondover">
-        0.0
-     </span>)
-
-     <button class="match1btn4">
-        PAK
-    </button>
-
-    <button class="match1btn5">
-
-    </button>
-
+<div class="previousmatchdiv grid grid-rows-3">
+   <span class="order-1"></span>
+    <button id="previousMatchBtn" class=" bg-oneGreenDk w-56 mb-5 mt-10 rounded-md order-2 text-black">PREVIOUS MATCHES</button>
+   <span class="order-3"></span>
 </div>
-
-<span class="PlayerNames"></span>
-
-<div class="headlinesOfComments">
-   <h7 >Headlines</h7>
 </div>
-<div class="headlines">
-   <div class="comment"></div>
-</div>
-
-<div class="previousmatchdiv">
-   <a href="./Previous.html">
-    <button id="previousMatchBtn">PREVIOUS MATCHES</button>
-   </a>
-</div>
-
-<div class="creators">
-    Made with <span class="dil">❣</span> by Sunandhit and Vineet
-</div>
+<div class="builders bg-oneGreen">
+   <h1 class="text-center text-black">Made with &#128150; by <a href="https://github.com/Sunandhit-Gupta" target="_blank">Sunandhit</a> and <a href="http://bento.me/vineetbambah" target="_blank">Vineet</a></h1>
 </div>
 <script src="main.js" type="module"></script>
 </body>

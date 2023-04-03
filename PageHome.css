@@ -1,3 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: monte;
+    src: url(/res/Montserrat.ttf);
+}
+@font-face {
+    font-family: sf;
+    src: url(/res/SF-Pro-Text-Regular.otf);
+}
+/*
 *{
     margin: 0;
     padding: 0;
@@ -5,8 +17,6 @@
     background: #5675e4;
     border-color: #7289da;
 }
-
-
 .Head{
     text-align: center;
     font-family: fantasy;
@@ -137,3 +147,4 @@
     color: red;
     background: #7289da;
 }
+*/
