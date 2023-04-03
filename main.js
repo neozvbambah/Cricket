@@ -125,7 +125,6 @@ let openPlayer2Drawer = false;
     openPlayer2Drawer = false;
   }
 })
-
 prevMatch.addEventListener('click',()=>{
   window.location.replace("./Previous.html");
 })

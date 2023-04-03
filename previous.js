@@ -25,7 +25,7 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
-
+ 
 
   //   Documents importing for DOM manupulation:::
 
@@ -97,14 +97,15 @@
   let m7secondover = document.querySelector('.m7secondover');
   let match7btn4 = document.querySelector('.match7btn4');
 
+  let liveMatch = document.querySelector('#liveMatchBtn');
 
+  liveMatch.addEventListener('click',()=>{
+    window.location.replace("./index.html");
+  })
 // reading and writing on Html::::
 
   onValue(ref(database,'/' ), (snapshot) => {
     const matchDataBase = snapshot.val();
-
-
-    console.log(matchDataBase);
     match1btn2.innerHTML = matchDataBase.Saved.Match1.Team1.name;
     m1firstscore.innerHTML = matchDataBase.Saved.Match1.Team1.runs;
     m1firstwickets.innerHTML= matchDataBase.Saved.Match1.Team1.wickets;
@@ -320,3 +321,4 @@
     })
   })
   })
+  
