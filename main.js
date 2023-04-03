@@ -31,7 +31,6 @@
     set(ref(database, "/"), 
         myData
     );
-    console.log(myData);
   }
 //   Documents importing for DOM manupulation:::
 
@@ -43,7 +42,9 @@
   let m1secondwickets = document.querySelector('.m1secondwickets');
   let m1secondover = document.querySelector('.m1secondover');
   let match1btn4 = document.querySelector('.match1btn4');
-  
+  let team1div = document.querySelector('.team1');
+  let team2div = document.querySelector('.team2');
+  let prevMatch = document.querySelector('#previousMatchBtn');
 
 
 
@@ -52,7 +53,6 @@
 
   onValue(ref(database,'/' ), (snapshot) => {
     const matchDataBase = snapshot.val();
-    console.log(matchDataBase);
     match1btn2.innerHTML = matchDataBase.Ongoing.Team1.name;
     m1firstscore.innerHTML = matchDataBase.Ongoing.Team1.runs;
     m1firstwickets.innerHTML= matchDataBase.Ongoing.Team1.wickets;
@@ -75,7 +75,6 @@
     snapshot.forEach(function(element){
 
       commentDiv.innerHTML += `<div>${element.val().Time+" : "+element.val().Headline}</div>`;
-      console.log(element.val().Time);
 
     })
 
@@ -84,7 +83,7 @@
 
   let openPlayer1Drawer = false;
   let PlayerNames = document.querySelector('.PlayerNames');
-  match1btn2.addEventListener('click',(e)=>{
+  team1div.addEventListener('click',(e)=>{
     let teamChoosed = match1btn2.innerHTML;
     if(openPlayer1Drawer==false){
     PlayerNames.innerHTML = `<div><b>${teamChoosed}</b></div>`;
@@ -108,7 +107,7 @@
 // For 2ndTEAM:::
 
 let openPlayer2Drawer = false;
-  match1btn4.addEventListener('click',(e)=>{
+  team2div.addEventListener('click',(e)=>{
     let teamChoosed = match1btn4.innerHTML;
     if(openPlayer2Drawer==false){
     PlayerNames.innerHTML = `<div><b>${teamChoosed}</b></div>`;
@@ -125,4 +124,8 @@ let openPlayer2Drawer = false;
     PlayerNames.innerHTML = '';
     openPlayer2Drawer = false;
   }
+})
+
+prevMatch.addEventListener('click',()=>{
+  window.location.replace("./Previous.html");
 })
